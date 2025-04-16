@@ -178,7 +178,7 @@ jobs:
       - name: Install cuda-toolkit
         id: cuda-toolkit
         if: ${{ matrix.build == 'cuda12' }}
-        uses: Jimver/cuda-toolkit@v0.2.19
+        uses: Jimver/cuda-toolkit@v0.2.23
         with:
           cuda: "12.6.3"
           method: "network"
