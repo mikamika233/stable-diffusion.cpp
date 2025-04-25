@@ -7,34 +7,6 @@ on:
         description: "Create new release"
         required: true
         type: boolean
-  push:
-    branches:
-      - master
-      - ci
-    paths:
-      [
-        ".github/workflows/**",
-        "**/CMakeLists.txt",
-        "**/Makefile",
-        "**/*.h",
-        "**/*.hpp",
-        "**/*.c",
-        "**/*.cpp",
-        "**/*.cu",
-      ]
-  pull_request:
-    types: [opened, synchronize, reopened]
-    paths:
-      [
-        "**/CMakeLists.txt",
-        "**/Makefile",
-        "**/*.h",
-        "**/*.hpp",
-        "**/*.c",
-        "**/*.cpp",
-        "**/*.cu",
-      ]
-
 env:
   BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
 
